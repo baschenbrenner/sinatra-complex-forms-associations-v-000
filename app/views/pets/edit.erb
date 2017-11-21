@@ -12,8 +12,6 @@ or Change who this pet belongs to?
 <input type="checkbox" name="owner_id" id="<%= owner.id%>" value="<%=owner.id%>"  <%='checked' if owner.id == @owner.id %>></input>
 <label for="<%= owner.id%>"><%=owner.name%> </label>
 <%end%>
-<input type="submit" value="Update Pet">
-
 
 
 
@@ -22,6 +20,8 @@ or Change who this pet belongs to?
 or Add New Owner:
 
 
-Owner Name:<input type="text" name="owner_name">
-<input type="submit" value="submit">
+Owner Name:<input type="text" name="owner[name]">
+<input type="submit" value="Update Pet">
+
+
 </form>
