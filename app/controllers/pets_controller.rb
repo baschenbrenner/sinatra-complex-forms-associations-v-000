@@ -46,6 +46,7 @@ class PetsController < ApplicationController
 
   post '/pets/:id/edit' do
     binding.pry
+    
     redirect to  "pets/#{@pet.id}"
   end
 
