@@ -2,8 +2,8 @@
 <%=@pet.name%>
 <form method='POST' action='/pets/<%=@pet.id%>/edit'>
   <input id="hidden" type="hidden" name="_method" value="patch">
-Pet Name: <input type="text" name="pet[name]">
-Currently Belongs to Owner Number <%=@owner.id%>
+Pet Name: <input type="text" name="pet[name]"><br/>
+Currently Belongs to Owner Number <%=@owner.id%><br/>
 
 
 Who does this pet belong to?
