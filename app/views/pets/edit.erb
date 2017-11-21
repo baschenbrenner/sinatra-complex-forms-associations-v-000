@@ -1,5 +1,5 @@
 <h1>Update Pet</h1>
-
+<%=@pet.name%>
 <form method='POST' action='/pets/<%=@pet.id%>/edit'>
   <input id="hidden" type="hidden" name="_method" value="patch">
 Pet Name: <input type="text" name="pet[name]">
@@ -8,7 +8,7 @@ Currently Belongs to Owner Number <%=@owner.id%>
 
 Who does this pet belong to?
   <%Owner.all.each do |owner|%>
-<input type="checkbox" name="owner_id" id="<%= owner.id%>" value="<%=owner.id%>" <%='checked' if @owner.pets.include?(@pet) %>><%=@pet.name%></input>
+<input type="checkbox" name="owner_id" id="<%= owner.id%>" value="<%=owner.id%>" ></input>
 <label for="<%= owner.id%>"><%=owner.name%> </label>
 <%end%>
 
