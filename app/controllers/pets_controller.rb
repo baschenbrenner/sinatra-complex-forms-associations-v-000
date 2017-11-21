@@ -45,7 +45,7 @@ class PetsController < ApplicationController
   end
 
   post '/pets/:id/edit' do
-    
+
     @pet=Pet.find(params[:id])
     @pet.update(name: params[:pet]["name"])
     binding.pry
