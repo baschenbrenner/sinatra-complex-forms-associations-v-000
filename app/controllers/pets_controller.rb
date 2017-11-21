@@ -46,7 +46,8 @@ class PetsController < ApplicationController
 
   post '/pets/:id/edit' do
     binding.pry
-    Pet.find(params[:id]).update(name: params[:pet]["name"])
+    @pet=Pet.find(params[:id])
+    @pet.update(name: params[:pet]["name"])
     redirect to  "pets/#{@pet.id}"
   end
 
